@@ -1,0 +1,22 @@
+{
+  "name": "guess-a-word-cli",
+  "version": "1.0.0",
+  "description": "A word guessing game made in node to practice object oriented programming.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nick-Haer/guess-a-word-CLI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nick-Haer/guess-a-word-CLI/issues"
+  },
+  "homepage": "https://github.com/Nick-Haer/guess-a-word-CLI#readme",
+  "dependencies": {
+    "inquirer": "^6.5.1"
+  }
+}
