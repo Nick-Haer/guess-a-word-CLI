@@ -21,3 +21,5 @@ class Letter {
     }
 }
 
+exports = Letter
+
