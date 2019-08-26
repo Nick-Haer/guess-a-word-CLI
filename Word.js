@@ -1,29 +1,32 @@
-const Letter = require(`./index`)
+const Letter = require(`./Letter`)
+console.log(Letter)
 
 class Word {
-    constructor (wordToGuess) {
+    constructor(wordToGuess) {
         let currentWord = [];
         this.currentWord = currentWord;
         for (let letter of wordToGuess) {
-           currentWord.push(new Letter(letter))
+            currentWord.push(new Letter(letter))
         }
     }
 
 
-    showWord () {
+    showWord() {
+        let currentWordDisplay = []
         for (let aLetter of this.currentWord) {
-            let currentWordDisplay = []
             currentWordDisplay.push(aLetter.displayLetter())
-            this.currentWord.length = 0;
-            this.currentWord = [...currentWordDisplay];
         }
+        return (currentWordDisplay)
+
     }
 
-    guessLetter (guessedChar) {
+    guessLetter(guessedChar) {
         for (let aLetter of this.currentWord) {
-                aLetter.checkLetter(guessedChar)
+            aLetter.checkLetter(guessedChar)
         }
     }
 
 
 }
+
+module.exports = Word;

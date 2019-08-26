@@ -15,11 +15,12 @@ class Letter {
     }
 
     checkLetter (guess) {
+
         if (guess === this.hiddenLetter) {
             this.guessed = true;
         }
     }
 }
 
-exports = Letter
+module.exports = Letter
 
