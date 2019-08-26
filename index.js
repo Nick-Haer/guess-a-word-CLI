@@ -18,7 +18,7 @@ function pickWord() {
 
 let chooseWord = pickWord()
 let theWord = new Word(chooseWord)
-console.log(theWord.showWord())
+console.log(theWord.showWord().join(` `))
 
 
 function wordGuessGame() {
@@ -45,13 +45,13 @@ function wordGuessGame() {
                 console.log(`You have ${guesses} guesses left`)
             }
         }
-        console.log(displayWord)
+        console.log(displayWord.join(` `))
         if (!(displayWord.includes(`_`))) {
             console.log(`You Win! On to the next one!`)
             guesses = 12;
             chooseWord = pickWord()
             theWord = new Word(chooseWord)
-            console.log(theWord.showWord())
+            console.log(theWord.showWord().join(` `))
             wordGuessGame()
         } else {
             wordGuessGame()
