@@ -2,7 +2,7 @@ const inquirer = require(`inquirer`)
 
 const Word = require(`./Word`)
 
-console.log(Word)
+// console.log(Word)
 
 let words = [`star`, `quasar`, `moon`, `earth`, `satellite`, `neptune`, `mercury`, `jupiter`];
 
@@ -18,7 +18,7 @@ function pickWord() {
 
 let chooseWord = pickWord()
 let theWord = new Word(chooseWord)
-console.log(theWord)
+console.log(theWord.showWord())
 
 
 function wordGuessGame() {
@@ -29,10 +29,10 @@ function wordGuessGame() {
         type: `input`
     }).then((response) => {
         let pickedLetter = response.guessALetter
-        console.log(pickedLetter)
+        // console.log(pickedLetter)
         theWord.guessLetter(pickedLetter)
         let displayWord = theWord.showWord()
-        if (displayWord.includes.pickedLetter) {
+        if (displayWord.includes(pickedLetter)) {
             console.log("Great, you guessed the right letter!")
         } else {
             console.log("Not this time!")
@@ -51,6 +51,7 @@ function wordGuessGame() {
             guesses = 12;
             chooseWord = pickWord()
             theWord = new Word(chooseWord)
+            console.log(theWord.showWord())
             wordGuessGame()
         } else {
             wordGuessGame()
