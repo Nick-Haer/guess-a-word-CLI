@@ -1,5 +1,5 @@
 const Letter = require(`./Letter`)
-console.log(Letter)
+
 
 class Word {
     constructor(wordToGuess) {
